@@ -18,7 +18,7 @@ import org.apache.hadoop.mapreduce.lib.output.TextOutputFormat;
 public class WordCount {
 	
 	public static class WCMapper extends Mapper<LongWritable, Text, Text, LongWritable>{
-		private final static LongWritable lw = new LongWritable();
+		private final static LongWritable lw = new LongWritable(1);
 		private Text word = new Text();
 		
 		@Override
